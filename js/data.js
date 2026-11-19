@@ -73,6 +73,9 @@ window.COURSE = {
     }
   },
 
+  // Guest lectures tab labels (only these sessions get a tab under Guest lectures)
+  guestTabs: { 2: 'Vibe coding', 4: 'Nick Goh' },
+
   // Session notes shown under Guest lectures, keyed by session number
   sessionNotes: {
     2: {

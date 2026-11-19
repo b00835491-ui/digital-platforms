@@ -90,9 +90,12 @@
     t.appendChild(document.createTextNode(isProf ? "Professor's " : 'Guest '));
     t.appendChild(el('em', { text: 'lectures' }));
     var sTabs = $('read-session-tabs'); clear(sTabs);
-    C.sessions.forEach(function (s) {
+    var guestLabels = C.guestTabs || {};
+    var tabSessions = isProf ? C.sessions : C.sessions.filter(function (s) { return guestLabels[s.n]; });
+    if (!isProf && tabSessions.length && !guestLabels[state.readSession]) state.readSession = tabSessions[0].n;
+    tabSessions.forEach(function (s) {
       sTabs.appendChild(el('button', {
-        type: 'button', role: 'tab', 'aria-selected': String(state.readSession === s.n), text: 'Session ' + pad(s.n),
+        type: 'button', role: 'tab', 'aria-selected': String(state.readSession === s.n), text: isProf ? 'Session ' + pad(s.n) : guestLabels[s.n],
         on: { click: function () { state.readSession = s.n; renderReadings(); } }
       }));
     });
