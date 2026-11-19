@@ -48,19 +48,15 @@ window.COURSE = {
   readings: {
     prof: {
       1: [
-        { kind: 'Slides', title: 'Digital Marketing Platforms in the AI Era — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
-        { kind: 'Required', title: '[Required reading title]', meta: '[Author, year · source]', url: '#', action: 'Read' },
-        { kind: 'Further', title: '[Further reading title]', meta: '[Author, year · source]', url: '#', action: 'Read' }
+        { kind: 'Slides', title: 'Digital Marketing Platforms in the AI Era — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }
       ],
       2: [
-        { kind: 'Slides', title: 'Digital Marketing Tools & Their Use for Marketers — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
-        { kind: 'Required', title: '[Required reading title]', meta: '[Author, year · source]', url: '#', action: 'Read' }
+        { kind: 'Slides', title: 'Digital Marketing Tools & Their Use for Marketers — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }
       ],
       3: [
         { kind: 'Slides', title: 'Media Buying & Campaign Objectives — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
         { kind: 'Brief', title: 'Final group project: omni-channel campaign', meta: 'Madina Kalyayeva · in the session 3 slides', url: '#', action: 'Open' }
-      ],
-      5: [{ kind: 'Slides', title: '[Session 5 lecture slides]', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }]
+      ]
     },
     guest: {
       2: [

@@ -151,7 +151,7 @@ button { font: inherit; cursor: pointer; }
 .schedule { width: 100%; min-width: 780px; border-collapse: collapse; font-size: 14.5px; font-variant-numeric: tabular-nums; }
 .schedule th { text-align: left; padding: 18px 22px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .24em; color: var(--subtle); }
 .schedule td { padding: 18px 22px; border-top: 1px solid var(--line-soft); }
-.s-n { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-style: italic; font-size: 22px; }
+.s-n { display: inline-flex; min-height: 44px; color: inherit; text-decoration: none; align-items: center; gap: 12px; font-family: var(--serif); font-style: italic; font-size: 22px; }
 .dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
 .s-topic { font-family: var(--serif); font-size: 18px; }
 .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 10px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; }
@@ -310,3 +310,4 @@ button { font: inherit; cursor: pointer; }
 .footer-credit { letter-spacing: .22em; text-transform: uppercase; font-size: 10px; }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+a.s-n:hover span:last-child, a.s-n:focus-visible span:last-child { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }

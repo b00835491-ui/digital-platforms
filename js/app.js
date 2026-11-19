@@ -72,7 +72,7 @@
       var dot = el('span', { class: 'dot', 'aria-hidden': 'true' });
       dot.style.background = swatches[i % swatches.length];
       body.appendChild(el('tr', {}, [
-        el('td', {}, [el('span', { class: 's-n' }, [dot, el('span', { text: pad(s.n) })])]),
+        el('td', {}, [el('a', { class: 's-n', href: '#readings/' + ((C.guestTabs || {})[s.n] ? 'guest' : 'prof') + '/' + s.n, 'aria-label': 'Session ' + pad(s.n) + ' overview' }, [dot, el('span', { text: pad(s.n) })])]),
         el('td', { text: s.date }),
         el('td', { class: 's-topic', text: s.title }),
         el('td', {}, [el('span', { class: 'tag' + (s.format.indexOf('Guest') !== -1 ? ' tag-peach' : ''), text: s.format })]),
@@ -114,7 +114,7 @@
     list.hidden = items.length === 0;
     var empty = $('reading-empty');
     empty.hidden = items.length > 0;
-    empty.textContent = isProf ? 'This session is a guest lecture — see Guest lectures in the menu.' : 'No guest lecture in this session.';
+    empty.textContent = isProf ? ((C.guestTabs || {})[state.readSession] ? 'This session is a guest lecture — see Guest lectures in the menu.' : 'Materials for this session will be added after the class.') : 'No guest lecture in this session.';
     var notes = (C.sessionNotes || {})[state.readSession];
     renderNotes(notes && (notes.tab || 'guest') === state.readTab ? notes : null);
   }
@@ -487,7 +487,12 @@
     if (!labels[page]) page = 'welcome';
     if (page !== 'play') stopTimer();
 
-    if (page === 'readings') { state.readTab = arg === 'guest' ? 'guest' : 'prof'; renderReadings(); }
+    if (page === 'readings') {
+      state.readTab = arg === 'guest' ? 'guest' : 'prof';
+      var rs = parseInt(parts[2], 10);
+      if (rs >= 1 && rs <= C.sessions.length) state.readSession = rs;
+      renderReadings();
+    }
     if (page === 'game') {
       var n = parseInt(arg, 10);
       if (n && C.sessions[n - 1]) { if (!C.sessions[n - 1].open) { location.replace('#locked/' + n); return; } state.hubSession = n; }
