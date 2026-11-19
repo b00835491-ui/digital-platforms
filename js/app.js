@@ -146,7 +146,7 @@
       el('ul', { class: 'team-list' }, tm.members.map(function (m) {
         return el('li', {}, [
           el('span', { class: 'team-name', text: m.name }),
-          el('span', { class: 'r-meta', text: m.role }),
+          m.role ? el('span', { class: 'r-meta', text: m.role }) : null,
           m.url ? el('a', { class: 'btn btn-ghost team-link', href: m.url, target: '_blank', rel: 'noopener', text: 'LinkedIn' }) : el('span')
         ]);
       }))

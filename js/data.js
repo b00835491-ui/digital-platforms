@@ -27,8 +27,8 @@ window.COURSE = {
     ['Programme', 'MSc Marketing Management & Digital'],
     ['Campus', 'ESSEC Asia-Pacific, Singapore'],
     ['Instructor', 'Madina Kalyayeva'],
-    ['Format', '5 sessions · lectures, a guest lecture, a game after each class'],
-    ['Assessment', 'Final group project: omni-channel campaign pitch, 50% of the grade · [Other assessment details]']
+    ['Format', 'Lectures, guest lectures and a game after each class'],
+    ['Assessment', 'Final group project: omni-channel campaign pitch, 50% of the grade']
   ],
 
   // open: true = game playable; false = shows the "locked" page
@@ -40,8 +40,7 @@ window.COURSE = {
     { n: 3, date: '23 Oct 2026', title: 'Media Buying & Campaign Objectives', format: 'Lecture + final project brief', speaker: 'Madina Kalyayeva', open: true,
       summary: 'Organic vs paid social, why media agencies still matter in the AI era, the six Meta campaign objectives, and the brief for the final omni-channel group project.' },
     { n: 4, date: '30 Oct 2026', title: 'Building an AI Marketing Team', format: 'Guest lecture', speaker: 'Nick Goh · Inspiro Consulting', open: true,
-      summary: 'A lite agentic workflow with Claude: a planning team and a production team of AI roles, run live on a luxury social media launch brief.' },
-    { n: 5, date: '[Date]', title: '[Session 5 topic]', format: 'Lecture', speaker: 'Madina Kalyayeva', open: false, summary: '' }
+      summary: 'A lite agentic workflow with Claude: a planning team and a production team of AI roles, run live on a luxury social media launch brief.' }
   ],
 
   // readings.prof[session] / readings.guest[session] — url: '#' until real links are added
@@ -79,11 +78,10 @@ window.COURSE = {
         name: 'LaunchLab',
         photo: 'img/launchlab-session2.jpg',
         alt: 'The three LaunchLab presenters on stage at ESSEC Asia-Pacific, in front of a slide titled "Design Your Front End First"',
-        intro: "The three-person LaunchLab team came to show how to go from an idea to a live website in a single class. Their workflow has three steps: design the front end first in Claude Design, describing the look without writing code; build it with Claude Code; then push to GitHub and deploy on Vercel. It is the same workflow used to build this site.",
+        intro: "The LaunchLab team came to show how to go from an idea to a live website in a single class. Their workflow has three steps: design the front end first in Claude Design, describing the look without writing code; build it with Claude Code; then push to GitHub and deploy on Vercel. It is the same workflow used to build this site.",
         members: [
-          { name: 'Rishabh Modi', role: '[Role]', url: 'https://www.linkedin.com/in/rishabh-modi-2b0b06307/' },
-          { name: 'Yibo Yang', role: '[Role]', url: 'https://www.linkedin.com/in/yiboyang8/' },
-          { name: '[Third presenter]', role: '[Role]' }
+          { name: 'Rishabh Modi', url: 'https://www.linkedin.com/in/rishabh-modi-2b0b06307/' },
+          { name: 'Yibo Yang', url: 'https://www.linkedin.com/in/yiboyang8/' }
         ]
       }
     },
