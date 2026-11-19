@@ -181,6 +181,12 @@ button { font: inherit; cursor: pointer; }
 .takeaways { margin: 4px 0 12px; padding: 0; list-style: none; counter-reset: tk; max-width: 72ch; }
 .takeaways li { counter-increment: tk; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; padding: 12px 18px; margin-bottom: 8px; background: var(--peach-light); border-radius: 14px; line-height: 1.55; }
 .takeaways li::before { content: counter(tk, decimal-leading-zero); font-family: var(--script); font-size: 22px; line-height: 1.1; color: var(--rose-text); }
+.team-photo { display: block; width: 100%; max-width: 720px; height: auto; aspect-ratio: 1100 / 742; object-fit: cover; border-radius: 18px; border: 1px solid var(--line-soft); margin: 10px 0 16px; }
+.team-list { list-style: none; margin: 4px 0 12px; padding: 0; max-width: 720px; }
+.team-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name link" "role link"; column-gap: 16px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-soft); }
+.team-name { grid-area: name; font-family: var(--serif); font-size: 18px; }
+.team-list .r-meta { grid-area: role; font-size: 13px; color: var(--muted); }
+.team-link { grid-area: link; min-height: 44px; padding: 0 20px; font-size: 10.5px; }
 @media (max-width: 560px) { .speaker-card { flex-direction: column; gap: 14px; } .takeaways li { padding: 12px 14px; } }
 .empty-note { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--muted); }
 

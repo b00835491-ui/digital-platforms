@@ -75,6 +75,19 @@ window.COURSE = {
 
   // Session notes shown under Guest lectures, keyed by session number
   sessionNotes: {
+    2: {
+      team: {
+        name: 'LaunchLab',
+        photo: 'img/launchlab-session2.jpg',
+        alt: 'The three LaunchLab presenters on stage at ESSEC Asia-Pacific, in front of a slide titled "Design Your Front End First"',
+        intro: "The three-person LaunchLab team came to show how to go from an idea to a live website in a single class. Their workflow has three steps: design the front end first in Claude Design, describing the look without writing code; build it with Claude Code; then push to GitHub and deploy on Vercel. It is the same workflow used to build this site.",
+        members: [
+          { name: 'Rishabh Modi', role: '[Role]', url: 'https://www.linkedin.com/in/rishabh-modi-2b0b06307/' },
+          { name: 'Yibo Yang', role: '[Role]', url: 'https://www.linkedin.com/in/yiboyang8/' },
+          { name: '[Third presenter]', role: '[Role]' }
+        ]
+      }
+    },
     3: {
       tab: 'prof',
       analysis: [

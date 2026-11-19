@@ -134,14 +134,28 @@
         el('p', { class: 'note-text', text: sp.bio })
       ])
     ]));
-    box.appendChild(block('Session analysis', 'What the session covered', paras(n.analysis)));
-    box.appendChild(block('Key takeaways', 'What to remember', [
+    var tm = n.team;
+    if (tm) box.appendChild(el('section', { class: 'note-block team-block' }, [
+      el('p', { class: 'kicker', text: 'The speakers' }),
+      el('h3', { class: 'h3', text: tm.name }),
+      el('img', { class: 'team-photo', src: tm.photo, alt: tm.alt, loading: 'lazy' }),
+      el('p', { class: 'note-text', text: tm.intro }),
+      el('ul', { class: 'team-list' }, tm.members.map(function (m) {
+        return el('li', {}, [
+          el('span', { class: 'team-name', text: m.name }),
+          el('span', { class: 'r-meta', text: m.role }),
+          m.url ? el('a', { class: 'btn btn-ghost team-link', href: m.url, target: '_blank', rel: 'noopener', text: 'LinkedIn' }) : el('span')
+        ]);
+      }))
+    ]));
+    if (n.analysis) box.appendChild(block('Session analysis', 'What the session covered', paras(n.analysis)));
+    if (n.takeaways) box.appendChild(block('Key takeaways', 'What to remember', [
       el('ol', { class: 'takeaways' }, n.takeaways.map(function (t) { return el('li', { text: t }); }))
     ]));
     if (n.project) box.appendChild(block('Final group project', 'The brief at a glance', [
       el('ol', { class: 'takeaways' }, n.project.map(function (t) { return el('li', { text: t }); }))
     ]));
-    box.appendChild(block('My take', 'What I thought', paras(n.take)));
+    if (n.take) box.appendChild(block('My take', 'What I thought', paras(n.take)));
   }
 
   /* ---------- Game hub ---------- */
