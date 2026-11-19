@@ -38,7 +38,8 @@ window.COURSE = {
     { n: 2, date: '9 Oct 2026', title: 'Vibe Coding & Martech', format: 'Guest lecture + lecture', speaker: 'LaunchLab · Madina Kalyayeva', open: true,
       summary: "LaunchLab's Design → Build → Deploy workflow (Claude Design, Claude Code, GitHub, Vercel), then the martech stack: point tools, platforms, suites, hubs and AI agents." },
     { n: 3, date: '[Date]', title: 'Guest speaker session', format: 'Guest lecture', speaker: '[Guest speaker]', open: false, summary: '' },
-    { n: 4, date: '[Date]', title: '[Session 4 topic]', format: 'Lecture', speaker: 'Madina Kalyayeva', open: false, summary: '' },
+    { n: 4, date: '30 Oct 2026', title: 'Building an AI Marketing Team', format: 'Guest lecture', speaker: 'Nick Goh · Inspiro Consulting', open: false,
+      summary: 'A lite agentic workflow with Claude: a planning team and a production team of AI roles, run live on a luxury social media launch brief.' },
     { n: 5, date: '[Date]', title: '[Session 5 topic]', format: 'Lecture', speaker: 'Madina Kalyayeva', open: false, summary: '' }
   ],
 
@@ -54,7 +55,6 @@ window.COURSE = {
         { kind: 'Slides', title: 'Digital Marketing Tools & Their Use for Marketers — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
         { kind: 'Required', title: '[Required reading title]', meta: '[Author, year · source]', url: '#', action: 'Read' }
       ],
-      4: [{ kind: 'Slides', title: '[Session 4 lecture slides]', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }],
       5: [{ kind: 'Slides', title: '[Session 5 lecture slides]', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }]
     },
     guest: {
@@ -65,6 +65,40 @@ window.COURSE = {
       3: [
         { kind: 'Talk', title: '[Guest lecture title]', meta: '[Guest speaker, role · company]', url: '#', action: 'Open' },
         { kind: 'Recommended', title: '[Reading recommended by the speaker]', meta: '[Author, year · source]', url: '#', action: 'Read' }
+      ],
+      4: [
+        { kind: 'Talk', title: 'Building an AI Marketing Team: a lite agentic workflow with Claude', meta: 'Nick Goh · Yellow Pages · PDF', url: '#', action: 'Open' }
+      ]
+    }
+  },
+
+  // Session notes shown under Guest lectures, keyed by session number
+  sessionNotes: {
+    4: {
+      speaker: {
+        name: 'Nick Goh',
+        role: 'CEO, Inspiro Consulting · CMO, Yellow Pages Singapore',
+        photo: 'img/nick-goh.jpg',
+        bio: "Marketing strategist, business leader and AI practitioner. Nick led agency teams at Lowe & Partners and Euro RSCG (now Havas), working with brands such as SAP, Red Hat, Prudential and UOB. He holds an MSc in Marketing from King's College London, is a Fellow of the Chartered Institute of Marketing, trains at SMU Academy and SUTD Academy, and judges the Effie Awards Singapore and the Singapore Media Awards."
+      },
+      analysis: [
+        "Nick opened with the industry context: agencies are consolidating (WPP folding Ogilvy, VML and AKQA into one creative company) while companies move budget towards AI. His answer for marketers is not one big chatbot, but a small team of AI roles, each with a single job, working in Claude.",
+        "The planning team has three roles. The Brief Writer drafts the brief from the project context, the Brief Validator critiques it in a fresh chat (objective, audience, message, metric), and the Strategist turns the validated brief into a one-page Big Idea. The production team follows: a Designer / Art Director for key visuals, a Copywriter for the messaging hierarchy and channel copy, and a Reviewer who checks brand voice and fit with the brief.",
+        "He then ran the chain live on a Louis Vuitton social media launch brief for a handbag called Terra. Claude, connected to Gmail, found the brief in the inbox and pulled out the key information. Skills such as the Marketing Brief Builder and the Creative Review Scorer did the work, and the key visuals were made with Higgsfield. A human approves each step and saves it to the project knowledge base. The final Instagram story scored 5.7/10 on the creative scorer (BBH, Ogilvy and McCann lenses); a tighter, craft-focused shot of a hand on the clasp scored 6.7/10."
+      ],
+      takeaways: [
+        'Brief AI like a strategist would: detailed context, a clear role and the expected output in every conversation.',
+        'Split the work into roles (writer, validator, strategist, designer, copywriter, reviewer) instead of asking one chat to do everything.',
+        'Validate in a fresh chat: a new conversation gives the brief "fresh eyes" and catches what the writer missed.',
+        'Skills package a method once (brief builder, creative review scorer) so the knowledge can be pulled into any chat in seconds.',
+        'Connectors and triggers make it agentic: Claude can read a brief from Gmail and run on a schedule. For technical teams, n8n and Relevance AI can build the same agents.',
+        'Keep a human in the loop: you approve each handoff and decide what goes into the knowledge base.',
+        'Luxury is about craft. The best-scoring visual showed the craft of the product, not the setting.',
+        'Before you send a prompt, ask the AI how it would be received.'
+      ],
+      take: [
+        "The strongest idea of the session is that the workflow matters more than the tool. Writing a brief, validating it, and then producing the work is exactly how a good agency runs; Nick simply gave each role to an AI and kept the approvals human. That makes the method easy to copy for a small marketing team or a student project.",
+        "The live scores were the most honest part: the first creative only reached 5.7/10, and the better shot came from going back to the brand truth (craft) rather than from a better prompt. AI speeds up the drafts, but judgement on strategy and taste still decides the quality. The open question for me is cost and control: running six roles, connectors and image tools needs clear brand guidelines and someone accountable for what gets published."
       ]
     }
   },
