@@ -28,7 +28,7 @@ window.COURSE = {
     ['Campus', 'ESSEC Asia-Pacific, Singapore'],
     ['Instructor', 'Madina Kalyayeva'],
     ['Format', '5 sessions · lectures, a guest lecture, a game after each class'],
-    ['Assessment', '[Assessment details]']
+    ['Assessment', 'Final group project: omni-channel campaign pitch, 50% of the grade · [Other assessment details]']
   ],
 
   // open: true = game playable; false = shows the "locked" page
@@ -37,8 +37,9 @@ window.COURSE = {
       summary: "The 10 types of digital marketing platforms, Singapore's 2026 numbers, and how AI is changing targeting, search and production." },
     { n: 2, date: '9 Oct 2026', title: 'Vibe Coding & Martech', format: 'Guest lecture + lecture', speaker: 'LaunchLab · Madina Kalyayeva', open: true,
       summary: "LaunchLab's Design → Build → Deploy workflow (Claude Design, Claude Code, GitHub, Vercel), then the martech stack: point tools, platforms, suites, hubs and AI agents." },
-    { n: 3, date: '[Date]', title: 'Guest speaker session', format: 'Guest lecture', speaker: '[Guest speaker]', open: false, summary: '' },
-    { n: 4, date: '30 Oct 2026', title: 'Building an AI Marketing Team', format: 'Guest lecture', speaker: 'Nick Goh · Inspiro Consulting', open: false,
+    { n: 3, date: '23 Oct 2026', title: 'Media Buying & Campaign Objectives', format: 'Lecture + final project brief', speaker: 'Madina Kalyayeva', open: true,
+      summary: 'Organic vs paid social, why media agencies still matter in the AI era, the six Meta campaign objectives, and the brief for the final omni-channel group project.' },
+    { n: 4, date: '30 Oct 2026', title: 'Building an AI Marketing Team', format: 'Guest lecture', speaker: 'Nick Goh · Inspiro Consulting', open: true,
       summary: 'A lite agentic workflow with Claude: a planning team and a production team of AI roles, run live on a luxury social media launch brief.' },
     { n: 5, date: '[Date]', title: '[Session 5 topic]', format: 'Lecture', speaker: 'Madina Kalyayeva', open: false, summary: '' }
   ],
@@ -55,16 +56,16 @@ window.COURSE = {
         { kind: 'Slides', title: 'Digital Marketing Tools & Their Use for Marketers — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
         { kind: 'Required', title: '[Required reading title]', meta: '[Author, year · source]', url: '#', action: 'Read' }
       ],
+      3: [
+        { kind: 'Slides', title: 'Media Buying & Campaign Objectives — lecture slides', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' },
+        { kind: 'Brief', title: 'Final group project: omni-channel campaign', meta: 'Madina Kalyayeva · in the session 3 slides', url: '#', action: 'Open' }
+      ],
       5: [{ kind: 'Slides', title: '[Session 5 lecture slides]', meta: 'Madina Kalyayeva · PDF', url: '#', action: 'Open' }]
     },
     guest: {
       2: [
         { kind: 'Talk', title: 'Vibe coding: Claude Design, Claude Code, GitHub and Vercel', meta: 'LaunchLab · PDF', url: '#', action: 'Open' },
         { kind: 'Example', title: 'LaunchLab example site', meta: 'essec-homework.vercel.app', url: 'https://essec-homework.vercel.app/', action: 'Open' }
-      ],
-      3: [
-        { kind: 'Talk', title: '[Guest lecture title]', meta: '[Guest speaker, role · company]', url: '#', action: 'Open' },
-        { kind: 'Recommended', title: '[Reading recommended by the speaker]', meta: '[Author, year · source]', url: '#', action: 'Read' }
       ],
       4: [
         { kind: 'Talk', title: 'Building an AI Marketing Team: a lite agentic workflow with Claude', meta: 'Nick Goh · Yellow Pages · PDF', url: '#', action: 'Open' }
@@ -74,6 +75,36 @@ window.COURSE = {
 
   // Session notes shown under Guest lectures, keyed by session number
   sessionNotes: {
+    3: {
+      tab: 'prof',
+      analysis: [
+        "Madina opened with the difference between organic and paid social. Organic content builds the brand voice and community, but in 2026 a post only reaches around 3–5% of Instagram followers and about 1% on Facebook. Paid social rents that reach: boosted posts, targeted and retargeting campaigns, creator partnership ads (Spark Ads, Meta partnership ads) and AI-automated campaigns such as Advantage+, Smart+ and Performance Max. It works fast, but only as long as you keep funding it. The winning approach combines both.",
+        "The money is real: social ad spend is projected at US$338.75B worldwide in 2026, and in Singapore it grew 15.2% to US$588M in 2025, about a fifth of total ad spend. AI can now build, buy and optimise whole campaigns, but it optimises for the platform's own metrics and lacks context, strategy and creativity. The best formula is AI plus human expertise.",
+        "Media agencies are changing rather than disappearing. Omnicom completed its acquisition of IPG in November 2025, GroupM became WPP Media, and every holding company now runs its own AI platform (WPP Open, Publicis Marcel, Omnicom Omni). As Meta, Google and TikTok automate the buy, agencies move towards strategy, data, creative and measurement; even ChatGPT Ads in Southeast Asia are sold through the big agency groups.",
+        "The second part covered Meta's six campaign objectives (Awareness, Traffic, Engagement, Leads, App Promotion, Sales) mapped to the funnel. The objective is the GPS of a campaign: it decides how the algorithm optimises delivery, who sees the ad and how performance is measured. The session ended with the brief for the final group project."
+      ],
+      takeaways: [
+        'Organic alone is not enough: platforms are pay-to-play, and organic reach is a few percent of your followers.',
+        'Paid social only delivers while you fund it, so combine it with organic content that builds the relationship.',
+        'Choose the objective first. It tells the algorithm how to optimise, who to reach and how to measure success.',
+        'Match the objective to the funnel: Awareness at the top, Traffic, Engagement and Leads in the middle, Sales and App Promotion at the bottom.',
+        "Platform AI optimises for the platform's metrics. Humans check what actually drove incremental sales.",
+        'Agencies are shifting from buying media to strategy, data, creative and measurement, on their own AI platforms.',
+        'Keep optimising: test creatives and audiences, watch CTR, CPA and ROAS, and avoid the classic mistake of the wrong objective.'
+      ],
+      project: [
+        'Create an omni-channel digital campaign for a hypothetical new product or service from a brand of your choice.',
+        'Use at least 2 digital platforms plus at least one AI component, and explain the human decisions around it.',
+        'Plan a simulated US$100,000 budget by platform and funnel stage, keeping 10–15% as a test-and-learn reserve.',
+        'Include a SMART objective, personas, a 3-month timeline and KPIs per funnel stage, with a plan to prove impact.',
+        'Pitch: 20 minutes plus 5 minutes of Q&A in December 2026. The project counts for 50% of the grade.',
+        'My group: D4, presenting on 16 December 2026, 2:30–2:55 PM.'
+      ],
+      take: [
+        "This session connects everything else in the course: once you know that organic reach is a few percent and that the objective drives the algorithm, every platform session becomes a media-planning decision. The Meta objectives framework is simple but very practical, because choosing the wrong objective is the mistake that wastes budget before a campaign even starts.",
+        "The most interesting tension is AI versus the agency. Platforms now automate targeting and creative, yet the agencies are consolidating and building their own AI platforms instead of disappearing. For the final project, that means the value we can show is the human layer: a clear objective, a budget we can justify, and a way to prove that the campaign caused the results."
+      ]
+    },
     4: {
       speaker: {
         name: 'Nick Goh',
@@ -261,6 +292,111 @@ window.COURSE = {
         { min: 80, name: 'Vibe-Coding Martech Pro', message: 'Design → Build → Deploy, and you know what goes in the stack.' },
         { min: 50, name: 'Stack Builder', message: 'You can talk tools with developers and martech vendors.' },
         { min: 0, name: 'Git Hatchling', message: 'A good start. Replay the lingo round and it will stick.' }
+      ]
+    },
+    3: {
+      secondsPerQuestion: 20,
+      takeaway: 'The objective is the GPS: it tells the algorithm who to reach, how to optimise and how to measure.',
+      rounds: [
+        { name: 'Pick the Objective', desc: "Match each brief to one of Meta's six campaign objectives", type: 'choice', points: 1,
+          how: 'Read the brief, pick the Meta objective. Beat the clock.',
+          questions: [
+            { title: 'Graff promotes a new jewellery collection to stay top-of-mind with high-value audiences', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Awareness', explain: 'Brand Awareness optimises delivery to people likely to remember the brand: top of the funnel.' },
+            { title: 'Club21 runs a sale and wants people to land on its online store', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Traffic', explain: 'Traffic drives users to a destination. Landing Page Views only count people who actually load the page.' },
+            { title: 'A wellness influencer wants more shares on a workout video', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Engagement', explain: 'Post engagement optimises for likes, comments and shares.' },
+            { title: 'Elemis collects enquiries through an Instant Form, without people leaving Instagram', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Leads', explain: 'Instant Forms let users submit their details inside Facebook or Instagram.' },
+            { title: 'A new mobile game wants as many downloads as possible', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'App Promotion', explain: 'App Installs targets users likely to download; App Events and retention come next.' },
+            { title: 'A multi-brand store shows dynamic catalogue ads to past customers for a private sale', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Sales', explain: 'Catalogue Sales shows relevant products to people who already know you: bottom of the funnel.' },
+            { title: 'A B2B software company wants qualified prospects for its sales team', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Leads', explain: 'B2B companies usually prioritise Leads, while e-commerce brands focus on Sales.' },
+            { title: 'A brand wants more RSVPs for its launch event', prompt: 'Which objective fits best?', options: ['Awareness', 'Traffic', 'Engagement', 'Leads', 'App Promotion', 'Sales'], answer: 'Engagement', explain: 'Event Responses is part of the Engagement objective.' }
+          ] },
+        { name: 'Higher or Lower: Paid Social', desc: 'Reach, spend and benchmarks from the session', type: 'higherlower', points: 1,
+          how: 'Is the real figure higher or lower than our guess? Use the buttons or your ↑ ↓ keys.',
+          questions: [
+            hl('Share of Instagram followers an organic post reaches in 2026', '10%', 10, '~3–5%', 4, 'Organic reach is the slow game. Paid media is the fast track to visibility.'),
+            hl('Share of Facebook followers an organic post reaches in 2026', '5%', 5, '~1%', 1, 'Even lower than Instagram: platforms are pay-to-play.'),
+            hl('Worldwide social media ad spend projected for 2026', 'US$250B', 250, 'US$338.75B', 338.75, 'Statista projection.'),
+            hl('Singapore social media ad spend in 2025', 'US$400M', 400, 'US$588M', 588, 'Up 15.2% on the year.'),
+            hl("Social media's share of Singapore's total ad spend (US$2.8B)", '1/3', 33, '~1/5', 20, 'About a fifth of all ad spend in Singapore goes to social.'),
+            hl('Growth of digital ad spend across Asia-Pacific in 2026', '5%', 5, '8.3%', 8.3, 'eMarketer: budgets move to social, retail media and CTV.'),
+            hl('Average TikTok engagement rate in 2026', '1%', 1, '2.60%', 2.6, 'Socialinsider 2026 benchmarks: TikTok leads by far.'),
+            hl('Average Instagram engagement rate in 2026', '1.5%', 1.5, '0.48%', 0.48, 'Facebook is at 0.15% and X at 0.12%.'),
+            hl('Revenue of Omnicom after its IPG acquisition', 'US$15B', 15, '~US$26B', 26, "The world's largest marketing holding company since Nov 2025.")
+          ] },
+        { name: 'Paid or Organic?', desc: 'Sort the activity', type: 'choice', points: 1,
+          how: 'Is this paid or organic social? Pick one.',
+          questions: [
+            { title: 'Posting content regularly without boosting it', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Organic', explain: 'Unpaid posts, videos and stories that engage the audience naturally.' },
+            { title: 'Employees sharing company updates with their own networks', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Organic', explain: 'Employee advocacy is organic.' },
+            { title: "Running Spark Ads on a creator's TikTok video", prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Paid', explain: 'Creator partnership ads put budget behind creator content.' },
+            { title: 'Retargeting people who visited your website', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Paid', explain: 'Retargeting campaigns are paid.' },
+            { title: 'Reposting photos your customers shared (UGC)', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Organic', explain: 'Sharing UGC strengthens community involvement, at no media cost.' },
+            { title: 'Launching a Meta Advantage+ campaign', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Paid', explain: 'AI-automated campaigns are paid. The platform decides where the money goes, so measure it yourself.' },
+            { title: 'Replying to comments and DMs in an authentic way', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Organic', explain: 'Community management is the foundation of organic social.' },
+            { title: 'Boosting a post that is already performing well', prompt: 'Paid or organic?', options: ['Organic', 'Paid'], answer: 'Paid', explain: 'A boosted post is the simplest form of paid social.' }
+          ] },
+        { name: 'Bonus Question', desc: 'One final question, double points', type: 'choice', points: 2,
+          how: 'One last question — worth double.',
+          questions: [
+            { title: 'In the final group project, how much of the US$100,000 budget should you keep as a test-and-learn reserve?', prompt: 'Choose one.',
+              options: ['10–15%', '0%', '5%', '25–30%'], answer: '10–15%',
+              explain: 'The brief asks for a 10–15% reserve, plus the benchmark CPM, CPC or CPA you assumed and where it came from.' }
+          ] }
+      ],
+      badges: [
+        { min: 80, name: 'Media Buying Pro', message: 'Right objective, right funnel stage, right budget.' },
+        { min: 50, name: 'Funnel Planner', message: 'You know where each objective sits. Replay the numbers round.' },
+        { min: 0, name: 'Organic Rookie', message: 'A good start. Remember: the objective is the GPS.' }
+      ]
+    },
+    4: {
+      secondsPerQuestion: 20,
+      takeaway: 'Give each AI one job, validate with fresh eyes, keep the approvals human, and remember that luxury is craft.',
+      rounds: [
+        { name: 'Who Does What?', desc: 'Match the task to the right role in the AI marketing team', type: 'choice', points: 1,
+          how: 'Read the task, pick the role. Beat the clock.',
+          questions: [
+            { title: 'Drafts the marketing brief from the project context', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Brief Writer', explain: 'The first step of the planning team. Output: a draft brief.' },
+            { title: 'Critiques the brief in a fresh chat: objective, audience, message, metric', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Brief Validator', explain: 'New chat, fresh eyes. Output: a verdict and the top fixes.' },
+            { title: 'Turns the validated brief into a one-page Big Idea', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Strategist', explain: 'The Strategist digests the brief and shapes the Big Idea.' },
+            { title: 'Creates the key visuals, using connectors such as Higgsfield', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Designer / Art Director', explain: 'Output: key visual concepts and assets.' },
+            { title: 'Builds the messaging hierarchy and adapts it channel by channel', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Copywriter', explain: 'Output: channel-by-channel copy that follows the messaging hierarchy.' },
+            { title: 'Checks the work against brand voice and confirms it delivers the brief and Big Idea', prompt: 'Which role is this?', options: ['Brief Writer', 'Brief Validator', 'Strategist', 'Designer / Art Director', 'Copywriter', 'Reviewer'], answer: 'Reviewer', explain: 'The last step of the chain. Output: edits and sign-off.' }
+          ] },
+        { name: 'Old Way vs AI Way', desc: 'The classic agency workflow against the agentic one', type: 'oldai', points: 1,
+          how: 'Old way or AI way? Use the buttons or your ← → keys.',
+          questions: [
+            { statement: 'An account manager reads the client email and retypes the brief', answer: 'old', explain: 'Manual handoff from inbox to brief.' },
+            { statement: 'Claude, connected to Gmail, finds the brief and pulls out the key information', answer: 'ai', explain: 'The email trigger from the live demo: a connector does the reading.' },
+            { statement: 'A creative director scores the work in a review meeting', answer: 'old', explain: 'Judgement in the room, from one point of view.' },
+            { statement: 'A Creative Review Scorer skill rates the work through BBH, Ogilvy and McCann lenses', answer: 'ai', explain: 'A skill packages the scoring method so it can be run on any execution.' },
+            { statement: 'Re-explaining your method at the start of every new chat', answer: 'old', explain: 'Without skills, the knowledge lives only in your head.' },
+            { statement: 'A Marketing Brief Builder skill pulls the method into any chat in seconds', answer: 'ai', explain: 'Pull one piece of knowledge into the chat for quick productivity.' },
+            { statement: 'Briefs written and reviewed over several days of meetings', answer: 'old', explain: 'The classic planning cycle.' },
+            { statement: 'A scheduled task runs the brief builder every day at a set time', answer: 'ai', explain: 'Triggers and schedules are what make the workflow agentic.' }
+          ] },
+        { name: 'Workflow Check', desc: 'What Nick showed in the live demo', type: 'choice', points: 1,
+          how: 'Choose the right answer.',
+          questions: [
+            { title: 'Why validate the brief in a new chat?', prompt: 'Choose one.', options: ['A fresh chat gives the brief fresh eyes', 'It is cheaper', 'The first chat cannot read files', 'Claude forgets after one answer'], answer: 'A fresh chat gives the brief fresh eyes', explain: 'The validator should not inherit the writer\'s assumptions.' },
+            { title: 'Who approves each handoff and saves it to the knowledge base?', prompt: 'Choose one.', options: ['You', 'The Reviewer', 'The Strategist', 'Claude, automatically'], answer: 'You', explain: 'Step 4 of the handoff chain: the human stays in the loop.' },
+            { title: 'Which agent builder suits a technical, technology-driven team?', prompt: 'Choose one.', options: ['n8n', 'Canva', 'Higgsfield', 'Gmail'], answer: 'n8n', explain: 'n8n for technical teams; Relevance AI is the other option Nick mentioned.' },
+            { title: 'What did the first 3-frame Instagram story score?', prompt: 'Choose one.', options: ['5.7/10', '6.7/10', '8.2/10', '4.1/10'], answer: '5.7/10', explain: 'A solid start, not a great one. The scorer gave clear fixes.' },
+            { title: 'Which execution scored higher (6.7/10)?', prompt: 'Choose one.', options: ['A close-up of a hand on the clasp', 'A wider desert shot', 'A portrait without the bag', 'A text-only post'], answer: 'A close-up of a hand on the clasp', explain: 'The tactile detail showed the craft of the bag.' },
+            { title: 'In luxury, what do things tend to be about?', prompt: 'Choose one.', options: ['Craft', 'Discounts', 'Volume', 'Trends'], answer: 'Craft', explain: 'Luxury tends to refer to things that are crafted.' }
+          ] },
+        { name: 'Bonus Question', desc: 'One final question, double points', type: 'choice', points: 2,
+          how: 'One last question — worth double.',
+          questions: [
+            { title: 'What did Nick suggest asking the AI before you send a prompt?', prompt: 'Choose one.',
+              options: ['How would this prompt be received?', 'Which model are you?', 'Can you answer faster?', 'Can you write it shorter?'], answer: 'How would this prompt be received?',
+              explain: 'Let the AI check your brief before it does the work.' }
+          ] }
+      ],
+      badges: [
+        { min: 80, name: 'AI Team Lead', message: 'You could run the whole chain, from brief to sign-off.' },
+        { min: 50, name: 'Brief Validator', message: 'Solid. Replay the workflow round to lock it in.' },
+        { min: 0, name: 'Prompt Apprentice', message: 'A good start. One role, one job, fresh eyes.' }
       ]
     }
   },

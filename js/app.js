@@ -112,7 +112,8 @@
     var empty = $('reading-empty');
     empty.hidden = items.length > 0;
     empty.textContent = isProf ? 'This session is a guest lecture — see Guest lectures in the menu.' : 'No guest lecture in this session.';
-    renderNotes(isProf ? null : (C.sessionNotes || {})[state.readSession]);
+    var notes = (C.sessionNotes || {})[state.readSession];
+    renderNotes(notes && (notes.tab || 'guest') === state.readTab ? notes : null);
   }
 
   function renderNotes(n) {
@@ -124,7 +125,7 @@
     }
     function paras(list) { return list.map(function (t) { return el('p', { class: 'note-text', text: t }); }); }
     var sp = n.speaker;
-    box.appendChild(el('section', { class: 'speaker-card' }, [
+    if (sp) box.appendChild(el('section', { class: 'speaker-card' }, [
       el('img', { class: 'speaker-photo', src: sp.photo, alt: 'Portrait of ' + sp.name, width: '96', height: '96', loading: 'lazy' }),
       el('div', { class: 'speaker-body' }, [
         el('p', { class: 'kicker', text: 'The speaker' }),
@@ -136,6 +137,9 @@
     box.appendChild(block('Session analysis', 'What the session covered', paras(n.analysis)));
     box.appendChild(block('Key takeaways', 'What to remember', [
       el('ol', { class: 'takeaways' }, n.takeaways.map(function (t) { return el('li', { text: t }); }))
+    ]));
+    if (n.project) box.appendChild(block('Final group project', 'The brief at a glance', [
+      el('ol', { class: 'takeaways' }, n.project.map(function (t) { return el('li', { text: t }); }))
     ]));
     box.appendChild(block('My take', 'What I thought', paras(n.take)));
   }
